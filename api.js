@@ -18,8 +18,9 @@ app.use(cors(corsOptions));
 
 app.use(require('./routes/index'));
 app.use('/usr',require('./routes/usuario'));
-app.use('/plato',require('./routes/plato'))
-app.use('/pedido',require('./routes/pedido'))
+app.use('/plato',require('./routes/plato'));
+app.use('/pedido',require('./routes/pedido'));
+app.use('/nota',require('./routes/nota'))
 
 
 

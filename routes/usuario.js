@@ -8,7 +8,7 @@ ruta.get('/listar', auth.verificatoken, cusuario.listar);
 
 ruta.post('/login',cusuario.login);
 ruta.post('/modificar',auth.verificatoken,cusuario.modificar);
-ruta.post('/agregar',auth.verificatoken,cusuario.agregar);
+ruta.post('/agregar',cusuario.agregar);
 ruta.post('/borrar',auth.verificatoken,cusuario.borrar);
 
 module.exports=ruta;

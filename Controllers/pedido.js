@@ -33,8 +33,19 @@ module.exports ={
             })
         });
     },
+    tiket: (req, res) => {
+        const body = req.body;
+        mpedido.tiket(body, (err, results) => {
+            if (err) return res.status(500).send("Error en la Base de Datos");
+            return res.json({
+                success: 1,
+                data: results
+            })
+        });
+    },
     listar : (req,res) => {
-        mpedido.listar((err,results)=>{
+        const datos=req.body;
+        mpedido.listar(datos,(err,results)=>{
             if (err) {
                 console(err);
                 return;
